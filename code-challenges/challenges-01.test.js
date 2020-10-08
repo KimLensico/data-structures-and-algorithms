@@ -9,11 +9,11 @@ Then, write a function named speaker that takes in a string and a callback funct
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  return word.toUpperCase();
+  // Solution code here...
 };
 
 const speaker = (message, callback) => {
-  return callback.toUpperCase();
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,10 +32,9 @@ Within the addNumbers function, invoke the callback function as many times as ne
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
-function addValues(arr, value) {
-  arr = []
-  arr.push(value);
-}
+const addValues = (arr, value) => {
+  // Solution code here...
+};
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
