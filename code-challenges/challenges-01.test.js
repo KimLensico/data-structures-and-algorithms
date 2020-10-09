@@ -86,7 +86,27 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  //creating an array so that we can populate the values inside the loop
+  // on line 90, the empty array is being declared
+  let fizzBuzzArray = [];
+  // forEach() = a method for arrays, "for each num, *task*"
+  // forEach loop is where the array will be populating fizz/buzz/fizzbuzz/number
+  arr.forEach(num => {
+    // check to see if a value is divisible by 3 AND 5: (value % 3) && (value % 5)
+    // check to see if a value is divisible by 3: value % 3
+    // check to see if a value is divisible by 5: value % 5
+    // use the number if the value is neither: last else 
+    if ((num % 5 === 0) && (num % 3 === 0)) {
+      fizzBuzzArray.push(`Fizz Buzz`);
+    } else if (num % 3 === 0) {
+      fizzBuzzArray.push(`Fizz`);
+    } else if (num % 5 === 0) {
+      fizzBuzzArray.push(`Buzz`);
+    } else {
+      fizzBuzzArray.push(num);
+    }
+  });
+  return fizzBuzzArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
