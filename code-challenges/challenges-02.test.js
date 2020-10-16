@@ -9,8 +9,13 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 ------------------------------------------------------------------------------------------------ */
 
 const raisedToTheThird = (arr) => {
-  arr.forEach() = Math.pow((3))
-}
+  let array = []; // creating an empty array
+  arr.forEach(num => { // num=placeholder to take in the value/numbers 
+    let third = Math.pow(num, 3) // running the values into the array, then we're running the function through the third power
+    array.push(third); // pushing the array after it goes through third
+  });
+  return array; // returning array
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -19,9 +24,7 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 ------------------------------------------------------------------------------------------------ */
 
-const appendTheEnd = (str) => {
-  // Solution code here...
-};
+const appendTheEnd = (str) => `${str} The end.`; // appending in jQuery by using back ticks `` 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -37,7 +40,7 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = (arr) => {
-  // Solution code here...
+  arr.push(arr[0]); // copies/appends the first element [zero index] to the end of the array
 };
 
 /* ------------------------------------------------------------------------------------------------

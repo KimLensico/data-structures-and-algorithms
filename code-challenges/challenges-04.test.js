@@ -23,7 +23,7 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const generateSubmitButton = () => {
-  // Solution code here...
+  $('section').append('<button>submit</button>');
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -39,7 +39,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+  let num = /[0-9]/;
+  return num.test(input); // testing the num variable. test is a method to match things in a string. it returns true if it finds a match and return false otherwise 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,7 +52,11 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let word = str.match(/\b[A-Z].*?\b/g); // /b states the beginning and end, ^ says to match the beginning of the string
+  if (word === null) { // states if the variable 'word' doesn't match
+    word = [];
+  }
+  return word;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -61,7 +66,10 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  let city = arr.match(/[A-J].*?/i);
+  if (city === null) {
+    city = [];
+  } return city;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -238,6 +246,6 @@ xdescribe('Testing challenge 8', () => {
   });
 });
 
-function createSnippetWithJQuery(html){
+function createSnippetWithJQuery(html) {
   return cheerio.load(html);
 };

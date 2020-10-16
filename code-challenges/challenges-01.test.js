@@ -9,7 +9,7 @@ Then, write a function named speaker that takes in a string and a callback funct
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  return word.toUpperCase();
+  // Solution code here...
 };
 
 const speaker = (message, callback) => {
