@@ -9,7 +9,12 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-  // Solution code here...
+  const array = arr.reduce(function (a, b) {
+    // Math.max returns the highest value
+    return Math.max(a, b);
+  });
+  // returning it to input the array
+  return array;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -35,8 +40,17 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
-
+  // make an empty array 
+  const totals = [];
+  // make a loop running through the store hours
+  for (var hours = 0; hours < hoursOpen.length; hours++) {
+    let totalHours = 0;
+    for (var store = 0; store < stores.length; store++) {
+      totalHours += stores[store][hours];
+    }
+    totals.push(totalHours);
+  }
+  return totals;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -50,7 +64,16 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  var cookieArray = [];
+  // iterate over the hourlySales array and create an object for each hour
+  data.forEach((cookies, hour) => {
+    let tempArray = {
+      sales: cookies + ' cookies',
+      time: hours[hour]
+    }
+    cookieArray.push(tempArray);
+  })
+  return cookieArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,7 +98,15 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  let num; arr.forEach(item => {
+    item.items.forEach(element => {
+      // iterates through, for each item, if it has 'Treats' it will be added to array
+      if (element.name === 'Treats') {
+        num = element.quantity;
+      }
+    });
+  });
+  return num;
 };
 
 /* ------------------------------------------------------------------------------------------------
